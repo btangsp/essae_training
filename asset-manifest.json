@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/essae_training/static/css/main.3883a14c.chunk.css",
+    "main.js": "/essae_training/static/js/main.6d5da7be.chunk.js",
+    "main.js.map": "/essae_training/static/js/main.6d5da7be.chunk.js.map",
+    "runtime-main.js": "/essae_training/static/js/runtime-main.757f8a6a.js",
+    "runtime-main.js.map": "/essae_training/static/js/runtime-main.757f8a6a.js.map",
+    "static/js/2.f90d1827.chunk.js": "/essae_training/static/js/2.f90d1827.chunk.js",
+    "static/js/2.f90d1827.chunk.js.map": "/essae_training/static/js/2.f90d1827.chunk.js.map",
+    "index.html": "/essae_training/index.html",
+    "static/css/main.3883a14c.chunk.css.map": "/essae_training/static/css/main.3883a14c.chunk.css.map",
+    "static/js/2.f90d1827.chunk.js.LICENSE.txt": "/essae_training/static/js/2.f90d1827.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.757f8a6a.js",
+    "static/js/2.f90d1827.chunk.js",
+    "static/css/main.3883a14c.chunk.css",
+    "static/js/main.6d5da7be.chunk.js"
+  ]
+}
