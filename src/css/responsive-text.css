@@ -1,0 +1,163 @@
+/******************************************************************************
+Responsive font sizes
+******************************************************************************/
+
+
+.text-14-responsive {
+  font-size: 14px;
+}
+
+.text-16-responsive {
+  font-size: 16px;
+}
+
+.text-18-responsive {
+  font-size: 18px;
+}
+
+.text-20-responsive {
+  font-size: 20px;
+}
+
+.text-22-responsive {
+  font-size: 22px;
+}
+
+.text-24-responsive {
+  font-size: 24px;
+}
+
+.text-28-responsive {
+  font-size: 28px;
+}
+
+.text-32-responsive {
+  font-size: 32px;
+}
+
+.text-36-responsive {
+  font-size: 36px;
+}
+
+
+@media (max-width: 768px) {
+  .text-14-responsive {
+    font-size: 14px;
+  }
+
+
+  .text-16-responsive {
+    font-size: 14px;
+  }
+
+  .text-18-responsive {
+    font-size: 16px;
+  }
+
+  .text-20-responsive {
+    font-size: 18px;
+  }
+
+  .text-22-responsive {
+    font-size: 20px;
+  }
+
+  .text-24-responsive {
+    font-size: 22px;
+  }
+
+  .text-28-responsive {
+    font-size: 26px;
+  }
+
+  .text-32-responsive {
+    font-size: 30px;
+  }
+
+  .text-36-responsive {
+    font-size: 32px;
+  }
+}
+
+
+@media (max-width: 576px) {
+  .text-14-responsive {
+    font-size: 14px;
+  }
+
+  .text-16-responsive {
+    font-size: 14px;
+  }
+
+  .text-18-responsive {
+    font-size: 14px;
+  }
+
+  .text-20-responsive {
+    font-size: 16px;
+  }
+
+  .text-22-responsive {
+    font-size: 18px;
+  }
+
+  .text-24-responsive {
+    font-size: 20px;
+  }
+
+  .text-28-responsive {
+    font-size: 24px;
+  }
+
+  .text-32-responsive {
+    font-size: 26px;
+  }
+
+  .text-36-responsive {
+    font-size: 28px;
+  }
+}
+
+
+/******************************************************************************
+QHD and 4k
+******************************************************************************/
+
+
+@media (min-width:1921px) {
+  .text-14-responsive {
+    font-size: 16px;
+  }
+
+  .text-16-responsive {
+    font-size: 18px;
+  }
+
+  .text-18-responsive {
+    font-size: 20px;
+  }
+
+  .text-20-responsive {
+    font-size: 22px;
+  }
+
+  .text-22-responsive {
+    font-size: 24px;
+  }
+
+  .text-24-responsive {
+    font-size: 28px;
+  }
+
+  .text-28-responsive {
+    font-size: 32px;
+  }
+
+  .text-32-responsive {
+    font-size: 36px;
+  }
+
+  .text-36-responsive {
+    font-size: 40px;
+  }
+}
