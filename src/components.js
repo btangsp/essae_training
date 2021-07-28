@@ -57,7 +57,7 @@ export function Audio({ name, file, audioRef, setAudioEnded }) {
 			controls ref={audioRef} 
 			controlsList="nodownload" 
 			onEnded={() => {if (typeof(setAudioEnded) !== "undefined") {setAudioEnded(true);}}}>
-			<source src={`essae_training/audio/${file}`} type='audio/wav'/>
+			<source src={`audio/${file}`} type='audio/wav'/>
 		</audio>
 	);
 };
