@@ -10,9 +10,6 @@ import '../css/user-studies.css'
 
 function clickHandler(index, setIndex, UpdateAudio, setRefEnded, setFirstEnded, setSecondEnded) {
 	setIndex(index + 1);
-	// if (index < shuffledData.length - 1) {
-		
-	// }
 	if (index > 0) {
 		UpdateAudio();
 		updateChoice(-1);
@@ -71,7 +68,8 @@ function Task_Page_Conditional(taskInstruction, files, choice, setChoice, audioR
 function Task_Page(audioRef_1, audioRef_2, audioRef_3, index, setIndex, choice, setChoice, UpdateAudio, refEnded, setRefEnded, firstEnded, setFirstEnded, secondEnded, setSecondEnded) {	
 
 	let refInstruction = (
-		<br></br>
+		// <br></br>
+		<ReactMarkdown>{`**Sample Question**`}</ReactMarkdown>
 	);
 
 	if (!refEnded) {
@@ -93,27 +91,27 @@ function Task_Page(audioRef_1, audioRef_2, audioRef_3, index, setIndex, choice, 
 
 	let taskInstruction = null;
 	let task_pt1 = null;
-	const files = ['extreme_bad_stretches/p333_252_mic2_2.0_noisy.wav','extreme_bad_stretches/p333_252_mic2_2.0_noisy.wav']
+	const files = ['extreme_bad_stretches/p333_252_mic2_2.0_noisy.wav','extreme_bad_stretches/p333_252_mic2_2.0_noisy.wav'];
 
 	if (secondEnded) {
 		taskInstruction = (
-			<ReactMarkdown source={`Please select the higher-quality time-stretched audio.`}/>
+			<ReactMarkdown>{`Please select the higher-quality time-stretched audio, which is the option on the bottom.`}</ReactMarkdown>
 		);
 		task_pt1 = Task_Page_Conditional(taskInstruction, files, choice, setChoice, 
 			[audioRef_2, audioRef_3], refEnded, secondEnded, setSecondEnded);
 	}
 	else if (firstEnded) {
 		taskInstruction = (
-			<ReactMarkdown source={`Please listen to the **second** time-stretched audio in its entirety.`}/>
+			<ReactMarkdown>{`Please listen to the example of a **well** time-stretched audio in its entirety.`}</ReactMarkdown>
 		);
 		task_pt1 = Task_Page_Conditional(taskInstruction, files, choice, setChoice, 
 			[audioRef_2, audioRef_3], refEnded, secondEnded, setSecondEnded);
 	}
 	else if (refEnded) {
 		taskInstruction = (
-			<ReactMarkdown source={`Please listen to the following time-stretched audio in its entirety.`}/>
+			<ReactMarkdown>{`Please listen to the example of a **poorly** time-stretched audio in its entirety.`}</ReactMarkdown>
 		);
-		task_pt1 = Task_Page_Conditional(taskInstruction, files[0], choice, setChoice, 
+		task_pt1 = Task_Page_Conditional(taskInstruction, [files[0]], choice, setChoice, 
 			[audioRef_2], refEnded, firstEnded, setFirstEnded);
 	}
 
@@ -121,7 +119,7 @@ function Task_Page(audioRef_1, audioRef_2, audioRef_3, index, setIndex, choice, 
 	if (choice !== -1) {
 		next_button = (
 			<div className='section col-2 align-right'>
-				<a href="#" className="button" onClick={() => clickHandler(index, setIndex, UpdateAudio, setRefEnded, setFirstEnded, setSecondEnded)}>Next</a>
+				<a href="https://btangsp.github.io/essae_rating/" className="button">Next</a>
 			</div>
 		);
 	}
@@ -138,10 +136,10 @@ function Task_Page(audioRef_1, audioRef_2, audioRef_3, index, setIndex, choice, 
 function PostTest_Page(index, setIndex, textInput, setTextInput) {
 	return (
 		<div className="container grid">
-			<ReactMarkdown source={`#### **Post-Evaluation Survey**\nPlease describe any issues 
+			<ReactMarkdown>{`#### **Post-Evaluation Survey**\nPlease describe any issues 
 				in your listening environment that might have impeded your ability to clearly 
 				hear details in the audio. \n\n**NOTE:** Your answer will not affect your 
-				compensation.`}/>
+				compensation.`}</ReactMarkdown>
 			<textarea rows="4" onChange={e => setTextInput(e.target.value)} placeholder="My neighbor started moving their lawn."></textarea>
 			<div className='section col-2 align-right'>
 				<a href="#" className="button" onClick={() => checkTextInput(index, setIndex, textInput)}>Submit</a>
@@ -162,7 +160,7 @@ function Cond_stimuli(index, setIndex, audioRef_1, audioRef_2, audioRef_3, Updat
 		return Instruction_Page(audioRef_1, index, setIndex, UpdateAudio);
 	} 
 	// Example Page
-	else if (index >= 1) {
+	else if (index === 1) {
 		return Task_Page(audioRef_1, audioRef_2, audioRef_3, index, setIndex, 
 			choice, setChoice, UpdateAudio, refEnded, setRefEnded, 
 			firstEnded, setFirstEnded, secondEnded, setSecondEnded);
@@ -170,7 +168,7 @@ function Cond_stimuli(index, setIndex, audioRef_1, audioRef_2, audioRef_3, Updat
 	else {
 		return (
 			<div className="container">
-				<ReactMarkdown source={`#### Thank you for your participation.`}/>
+				<ReactMarkdown>{`#### Thank you for your participation.`}</ReactMarkdown>
 			</div>
 		);
 	}
