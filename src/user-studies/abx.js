@@ -82,7 +82,7 @@ function Task_Page(audioRef_1, audioRef_2, audioRef_3, index, setIndex, choice, 
 		<div className='section col-all'>
 			{refInstruction}
 			<Audio name={'test-abx'} 
-				file={'extreme_bad_stretches/p333_252_mic2_2.0_noisy.wav'} 
+				file={'2sets/test2/original/p232_001_mic2.wav'} 
 				audioRef={audioRef_1} 
 				setAudioEnded={setRefEnded}
 				/>
@@ -91,7 +91,7 @@ function Task_Page(audioRef_1, audioRef_2, audioRef_3, index, setIndex, choice, 
 
 	let taskInstruction = null;
 	let task_pt1 = null;
-	const files = ['extreme_bad_stretches/p333_252_mic2_2.0_noisy.wav','extreme_bad_stretches/p333_252_mic2_2.0_noisy.wav'];
+	const files = ['2sets/test2/wsola_model/p232_001_mic2_0.5_noisy.wav','2sets/test2/wsola_model/p232_001_mic2_0.5_enhanced.wav'];
 
 	if (secondEnded) {
 		taskInstruction = (
