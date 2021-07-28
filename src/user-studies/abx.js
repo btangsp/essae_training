@@ -91,7 +91,7 @@ function Task_Page(audioRef_1, audioRef_2, audioRef_3, index, setIndex, choice, 
 
 	let taskInstruction = null;
 	let task_pt1 = null;
-	const files = ['2sets/test2/wsola_model/p232_001_mic2_0.5_noisy.wav','2sets/test2/wsola_model/p232_001_mic2_0.5_enhanced.wav'];
+	const files = ['2sets/test2/phase_vocoder_model/p232_001_mic2_0.5_noisy.wav','2sets/test2/wsola_model/p232_001_mic2_0.5_enhanced.wav'];
 
 	if (secondEnded) {
 		taskInstruction = (
